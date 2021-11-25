@@ -13,3 +13,9 @@ console.log("Hello Nate!");
 // Are you happy with these results? C to Confirm or N if No"
 // If no, prompt asking "Which should we reselect at this moment? L, F, V, or E?"
 // When user input = C for Confirm, console log these results
+
+
+let destOptions = ['Chicago', 'Los Angeles', 'Atlantic City', 'Austin', 'Manhattan', 'Rome', 'Madrid', 'Seattle', 'Egypt', 'Nashville', 'Hong Kong', 'Hamburgh', 'Kingston'];
+let foodOptions = ['La Brioche', 'Jimmy Johns', 'Dive Bar', 'Taco Truck', 'Burger King', 'Pizzeria', 'Candy Shop', 'Hidden Cafe', 'Bougie Diner', 'Mom and Pop Shop', 'Airport Cafe']
+let transOptions = ['Rental Car', 'Uber/Lift', 'Red Bike Rental', 'Pedalcart', 'Trolley', 'Subway', 'Train', 'Walking', 'Double-Decker Bus']
+let enterOptions = ['Opera', 'Street Music', 'Jazz Club', 'Cirque du Soleil', 'Street Magicians', 'Movie', 'Floating Lanterns', 'Fireworks', 'Parade', 'Comic Convention']
