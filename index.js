@@ -30,35 +30,43 @@ let list = [];
 function placer(destOptions){
     return destOptions[Math.floor(Math.random()*destOptions.length)];
 }
-placeBox = placer(destOptions);
-list.push(placeBox);
 
 function fooder(foodOptions){
     return foodOptions[Math.floor(Math.random()*foodOptions.length)];
 }
-foodBox = fooder(foodOptions);
-list.push(foodBox);
 
 function goer(transOptions){
     return transOptions[Math.floor(Math.random()*transOptions.length)];
 }
-transBox = goer(transOptions);
-list.push(transBox);
 
 function tainer(enterOptions){
     return enterOptions[Math.floor(Math.random()*enterOptions.length)];
 }
-tainBox = tainer(enterOptions);
-list.push(tainBox);
 
-// let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Enter 'Run' when you're ready!");
-// if (userInput == 'Run'){
-    
-// }
+let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Enter 'Run' when you're ready!");
+if (userInput == 'Run'){
+    placeBox = placer(destOptions);
+    list.push(placeBox);
+    foodBox = fooder(foodOptions);
+    list.push(foodBox);
+    transBox = goer(transOptions);
+    list.push(transBox);
+    tainBox = tainer(enterOptions);
+    list.push(tainBox);
+                    
+}
 
 console.log(placeBox);
-console.log(fooder(foodOptions));
-console.log(goer(transOptions));
-console.log(tainer(enterOptions));
+console.log(foodBox);
+console.log(transBox);
+console.log(tainBox);
 console.log(list);
-
+let userInput3;
+let userInput2 = prompt("Below are your options. Are you happy with your results? C to Confirm, or R to Rerun");
+if (userInput2=="C"){
+    console.log("Congratulations! Your random day-trip selection process is now complete!");
+}
+else {
+    userInput3 = prompt("Which would you like to rerun? Type 'Place', 'Food', 'Vehicle', or 'Entertainment'. ")
+}
+console.log(userInput3);
