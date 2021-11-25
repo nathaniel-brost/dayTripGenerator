@@ -20,6 +20,24 @@ let foodOptions = ['La Brioche', 'Jimmy Johns', 'Dive Bar', 'Taco Truck', 'Burge
 let transOptions = ['Rental Car', 'Uber/Lift', 'Red Bike Rental', 'Pedalcart', 'Trolley', 'Subway', 'Train', 'My Legs!', 'Double-Decker Bus'];
 let enterOptions = ['Opera', 'Street Music', 'Jazz Club', 'Cirque du Soleil', 'Street Magicians', 'Movie', 'Floating Lanterns', 'Fireworks', 'Parade', 'Comic Convention'];
 
-let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Which should we choose first? Choose 'Place', 'Food', 'Vehicle', or 'Entertainment'.");
-let category = userInput;
+let list = [];
+
+function placer(destOptions){
+    
+}
+function fooder(foodOptions){
+
+}
+function goer(transOptions){
+
+}
+function tainer(enterOptions){
+
+}
+
+let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Enter 'Run' when you're ready!");
+if (userInput == 'Run'){
+
+}
 console.log(category);
+
