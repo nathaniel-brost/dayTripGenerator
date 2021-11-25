@@ -31,29 +31,34 @@ function placer(destOptions){
     return destOptions[Math.floor(Math.random()*destOptions.length)];
 }
 placeBox = placer(destOptions);
+list.push(placeBox);
 
 function fooder(foodOptions){
     return foodOptions[Math.floor(Math.random()*foodOptions.length)];
 }
 foodBox = fooder(foodOptions);
+list.push(foodBox);
 
 function goer(transOptions){
     return transOptions[Math.floor(Math.random()*transOptions.length)];
 }
 transBox = goer(transOptions);
+list.push(transBox);
 
 function tainer(enterOptions){
     return enterOptions[Math.floor(Math.random()*enterOptions.length)];
 }
 tainBox = tainer(enterOptions);
+list.push(tainBox);
 
-let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Enter 'Run' when you're ready!");
-if (userInput == 'Run'){
+// let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Enter 'Run' when you're ready!");
+// if (userInput == 'Run'){
     
-}
-// console.log(category);
-console.log(placer(destOptions));
+// }
+
+console.log(placeBox);
 console.log(fooder(foodOptions));
 console.log(goer(transOptions));
 console.log(tainer(enterOptions));
+console.log(list);
 
