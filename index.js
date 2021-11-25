@@ -52,8 +52,7 @@ if (userInput == 'Run'){
     transBox = goer(transOptions);
     list.push(transBox);
     tainBox = tainer(enterOptions);
-    list.push(tainBox);
-                    
+    list.push(tainBox);                 
 }
 
 console.log(placeBox);
@@ -69,4 +68,24 @@ if (userInput2=="C"){
 else {
     userInput3 = prompt("Which would you like to rerun? Type 'Place', 'Food', 'Vehicle', or 'Entertainment'. ")
 }
-console.log(userInput3);
+// console.log(userInput3);
+if (userInput3=="Place"){
+    placeBox = placer(destOptions);
+    list.splice(0, 1, placeBox);
+}
+else if (userInput3=="Food"){
+    foodBox = fooder(foodOptions);
+    list.splice(1, 1, foodBox);
+}
+else if (userInput3=="Vehicle"){
+    transBox = goer(transOptions);
+    list.splice(2, 1, transBox);
+}
+else if (userInput3=="Entertainment"){
+    tainBox = tainer(enterOptions);
+    list.splice(3, 1, tainBox);
+}
+else {
+    prompt("Whoopsie, that is not a valid category");
+}
+console.log(list);
