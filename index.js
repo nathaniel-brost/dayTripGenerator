@@ -20,24 +20,40 @@ let foodOptions = ['La Brioche', 'Jimmy Johns', 'Dive Bar', 'Taco Truck', 'Burge
 let transOptions = ['Rental Car', 'Uber/Lift', 'Red Bike Rental', 'Pedalcart', 'Trolley', 'Subway', 'Train', 'My Legs!', 'Double-Decker Bus'];
 let enterOptions = ['Opera', 'Street Music', 'Jazz Club', 'Cirque du Soleil', 'Street Magicians', 'Movie', 'Floating Lanterns', 'Fireworks', 'Parade', 'Comic Convention'];
 
+let placeBox;
+let foodBox;
+let transBox;
+let tainBox;
+
 let list = [];
 
 function placer(destOptions){
-    
+    return destOptions[Math.floor(Math.random()*destOptions.length)];
 }
+placeBox = placer(destOptions);
+
 function fooder(foodOptions){
-
+    return foodOptions[Math.floor(Math.random()*foodOptions.length)];
 }
+foodBox = fooder(foodOptions);
+
 function goer(transOptions){
-
+    return transOptions[Math.floor(Math.random()*transOptions.length)];
 }
+transBox = goer(transOptions);
+
 function tainer(enterOptions){
-
+    return enterOptions[Math.floor(Math.random()*enterOptions.length)];
 }
+tainBox = tainer(enterOptions);
 
 let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Enter 'Run' when you're ready!");
 if (userInput == 'Run'){
-
+    
 }
-console.log(category);
+// console.log(category);
+console.log(placer(destOptions));
+console.log(fooder(foodOptions));
+console.log(goer(transOptions));
+console.log(tainer(enterOptions));
 
