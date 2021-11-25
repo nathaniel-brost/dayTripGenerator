@@ -1,6 +1,15 @@
 "use strict"
 
 console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
+console.log("Hello Nate!");
 
 // part 1, 2, 3, 4 will be similar. 
 // create arrays with options for places, restaurants, transport, entertainment
@@ -54,11 +63,7 @@ if (userInput == 'Run'){
     tainBox = tainer(enterOptions);
     list.push(tainBox);                 
 }
-
-console.log(placeBox);
-console.log(foodBox);
-console.log(transBox);
-console.log(tainBox);
+console.log("Here are your random selections for location, food, transportation, and entertainment today:");
 console.log(list);
 let userInput3;
 let userInput2 = prompt("Below are your options. Are you happy with your results? C to Confirm, or R to Rerun");
@@ -66,26 +71,29 @@ if (userInput2=="C"){
     console.log("Congratulations! Your random day-trip selection process is now complete!");
 }
 else {
-    userInput3 = prompt("Which would you like to rerun? Type 'Place', 'Food', 'Vehicle', or 'Entertainment'. ")
+
+    while (userInput2 != "C"){
+
+        userInput3 = prompt("Which would you like to rerun? Type 'Place', 'Food', 'Vehicle', or 'Entertainment'. ")
+        if (userInput3=="Place"){
+            placeBox = placer(destOptions);
+            list.splice(0, 1, placeBox);
+        }
+        else if (userInput3=="Food"){
+            foodBox = fooder(foodOptions);
+            list.splice(1, 1, foodBox);
+        }
+        else if (userInput3=="Vehicle"){
+            transBox = goer(transOptions);
+            list.splice(2, 1, transBox);
+        }
+        else if (userInput3=="Entertainment"){
+            tainBox = tainer(enterOptions);
+            list.splice(3, 1, tainBox);            
+        }
+        else {
+            prompt("Whoopsie, that is not a valid category");
+        }
+        console.log(list);
+    }
 }
-// console.log(userInput3);
-if (userInput3=="Place"){
-    placeBox = placer(destOptions);
-    list.splice(0, 1, placeBox);
-}
-else if (userInput3=="Food"){
-    foodBox = fooder(foodOptions);
-    list.splice(1, 1, foodBox);
-}
-else if (userInput3=="Vehicle"){
-    transBox = goer(transOptions);
-    list.splice(2, 1, transBox);
-}
-else if (userInput3=="Entertainment"){
-    tainBox = tainer(enterOptions);
-    list.splice(3, 1, tainBox);
-}
-else {
-    prompt("Whoopsie, that is not a valid category");
-}
-console.log(list);
