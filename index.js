@@ -66,13 +66,18 @@ if (userInput == 'Run'){
 console.log("Here are your random selections for location, food, transportation, and entertainment today:");
 console.log(list);
 let userInput3;
-let userInput2 = prompt("Below are your options. Are you happy with your results? C to Confirm, or R to Rerun");
-if (userInput2=="C"){
-    console.log("Congratulations! Your random day-trip selection process is now complete!");
-}
-else {
+let complete;
 
-    while (userInput2 != "C"){
+let userInput2
+
+while (complete != "yes"){
+    userInput2 = prompt("Below are your options. Are you happy with your results? C to Confirm, or R to Rerun");
+
+    if (userInput2=="C"){
+        console.log("Congratulations! Your random day-trip selection process is now complete!");
+        complete = "yes";
+    }
+    else if (userInput2 != "C"){
 
         userInput3 = prompt("Which would you like to rerun? Type 'Place', 'Food', 'Vehicle', or 'Entertainment'. ")
         if (userInput3=="Place"){
