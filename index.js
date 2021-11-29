@@ -79,20 +79,20 @@ while (complete != "yes"){
     }
     else if (userInput2 != "C"){
 
-        userInput3 = prompt("Which would you like to rerun? Type 'Place', 'Food', 'Vehicle', or 'Entertainment'. ")
-        if (userInput3=="Place"){
+        userInput3 = prompt("Which would you like to rerun? Type 'P' for Place, 'F' for Food, 'V' for Vehicle, or 'E' for Entertainment. ")
+        if (userInput3=="P"){
             placeBox = placer(destOptions);
             list.splice(0, 1, placeBox);
         }
-        else if (userInput3=="Food"){
+        else if (userInput3=="F"){
             foodBox = fooder(foodOptions);
             list.splice(1, 1, foodBox);
         }
-        else if (userInput3=="Vehicle"){
+        else if (userInput3=="V"){
             transBox = goer(transOptions);
             list.splice(2, 1, transBox);
         }
-        else if (userInput3=="Entertainment"){
+        else if (userInput3=="E"){
             tainBox = tainer(enterOptions);
             list.splice(3, 1, tainBox);            
         }
@@ -102,3 +102,5 @@ while (complete != "yes"){
         console.log(list);
     }
 }
+console.log("This is our trip:");
+console.log(list);
