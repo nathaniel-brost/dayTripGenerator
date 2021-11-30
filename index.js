@@ -29,72 +29,79 @@ let foodOptions = ['La Brioche', 'Jimmy Johns', 'Dive Bar', 'Taco Truck', 'Burge
 let transOptions = ['Rental Car', 'Uber/Lift', 'Red Bike Rental', 'Pedalcart', 'Trolley', 'Subway', 'Train', 'My Legs!', 'Double-Decker Bus'];
 let enterOptions = ['Opera', 'Street Music', 'Jazz Club', 'Cirque du Soleil', 'Street Magicians', 'Movie', 'Floating Lanterns', 'Fireworks', 'Parade', 'Comic Convention'];
 
-let placeBox;
-let foodBox;
-let transBox;
-let tainBox;
-
+// let placeBox;
+// let foodBox;
+// let transBox;
+// let tainBox;
+let item; 
 let list = [];
 
-function placer(destOptions){
-    return destOptions[Math.floor(Math.random()*destOptions.length)];
+// function placer(destOptions){
+//     return destOptions[Math.floor(Math.random()*destOptions.length)];
+// }
+
+// function fooder(foodOptions){
+//     return foodOptions[Math.floor(Math.random()*foodOptions.length)];
+// }
+
+// function goer(transOptions){
+//     return transOptions[Math.floor(Math.random()*transOptions.length)];
+// }
+
+// function tainer(enterOptions){
+//     return enterOptions[Math.floor(Math.random()*enterOptions.length)];
+// }
+
+// let component = [];
+function picker(component){
+    return component[Math.floor(Math.random()*component.length)];
 }
 
-function fooder(foodOptions){
-    return foodOptions[Math.floor(Math.random()*foodOptions.length)];
-}
+alert("Good day to you! We will begin selecting random items for your trip. Press enter when you're ready!");
+item = picker(destOptions);
+list.push(item);
+item = picker(foodOptions);
+list.push(item);
+item = picker(transOptions);
+list.push(item);
+item = picker(enterOptions);
+list.push(item);                 
 
-function goer(transOptions){
-    return transOptions[Math.floor(Math.random()*transOptions.length)];
-}
 
-function tainer(enterOptions){
-    return enterOptions[Math.floor(Math.random()*enterOptions.length)];
-}
+// put lines 39-52 into a function and call the function
 
-let userInput = prompt("Good day to you! We will begin selecting random items for your trip. Enter 'Run' when you're ready!");
-if (userInput == 'Run'){
-    placeBox = placer(destOptions);
-    list.push(placeBox);
-    foodBox = fooder(foodOptions);
-    list.push(foodBox);
-    transBox = goer(transOptions);
-    list.push(transBox);
-    tainBox = tainer(enterOptions);
-    list.push(tainBox);                 
-}
 console.log("Here are your random selections for location, food, transportation, and entertainment today:");
 console.log(list);
-let userInput3;
+let userInput1;
+let userInput2;
 let complete;
 
-let userInput2
 
 while (complete != "yes"){
-    userInput2 = prompt("Below are your options. Are you happy with your results? C to Confirm, or R to Rerun");
+    userInput1 = prompt("Below are your options. Are you happy with your results? C to Confirm, or R to Rerun");
 
-    if (userInput2=="C"){
+    if (userInput1=="C"){
         console.log("Congratulations! Your random day-trip selection process is now complete!");
         complete = "yes";
     }
-    else if (userInput2 != "C"){
+    else if (userInput1 != "C"){
 
-        userInput3 = prompt("Which would you like to rerun? Type 'P' for Place, 'F' for Food, 'V' for Vehicle, or 'E' for Entertainment. ")
-        if (userInput3=="P"){
-            placeBox = placer(destOptions);
-            list.splice(0, 1, placeBox);
+        userInput2 = prompt("Which would you like to rerun? Type 'P' for Place, 'F' for Food, 'V' for Vehicle, or 'E' for Entertainment.")
+        if (userInput2=="P"){
+            item = picker(destOptions);
+            list.splice(0, 1, item);
         }
-        else if (userInput3=="F"){
-            foodBox = fooder(foodOptions);
-            list.splice(1, 1, foodBox);
+        else if (userInput2=="F"){
+            item = picker(foodOptions);
+            list.splice(1, 1, item);
         }
-        else if (userInput3=="V"){
-            transBox = goer(transOptions);
-            list.splice(2, 1, transBox);
+        else if (userInput2=="V"){
+            item = picker(transOptions);
+            list.splice(2, 1, item);
         }
-        else if (userInput3=="E"){
-            tainBox = tainer(enterOptions);
-            list.splice(3, 1, tainBox);            
+        else if (userInput2=="E"){
+            item = picker(enterOptions);
+            list.splice(3, 1, item);            
         }
         else {
             prompt("Whoopsie, that is not a valid category");
@@ -102,5 +109,7 @@ while (complete != "yes"){
         console.log(list);
     }
 }
-console.log("This is our trip:");
-console.log(list);
+console.log(`You will be heading to ${list[0]} and your main mode of transportation will be ${list[2]}.`);
+console.log(`Enjoy the fine local cuisine at ${list[1]}.`);
+console.log(`While you are there, also have a wonderful time seeing a ${list[3]}!`);
+
